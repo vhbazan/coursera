@@ -1,7 +1,8 @@
 <div class="row">
     <h3 ng-if="narrow.found.length>0">Menu Results:</h3>
     <ul>
-        <li ng-repeat="item in narrow.found" class="item"><span class="col-md-8">{{item.name}}</span>
+        <li ng-repeat="item in narrow.found" class="item"><span class="item-short-name">{{item.short_name}}</span><span class="col-md-8">{{item.name}}</span><br>
+        <span class="item-description" >{{item.description}}</span>
         <button ng-click="narrow.onRemove({index: $index});" 
                 class="btn btn-warning remove-button">Remove</button></li>
     </ul>

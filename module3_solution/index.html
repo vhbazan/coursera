@@ -13,7 +13,7 @@
      <div class="container" ng-controller="NarrowItDownController as narrow">
         <h1>Narrow Down Your Chinese Menu Choice</h1>
         <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <div class="form-group">
             <input type="text" placeholder="search term" class="form-control" ng-model="narrow.searchTerm">
             <button class="btn btn-primary" ng-click="narrow.searchMenuItems(narrow.searchTerm);">Narrow It Down For Me!</button>
@@ -30,7 +30,7 @@
                     found="narrow.itemsFound"
                     empty-search="narrow.emptySearch" 
                     empty-results="narrow.emptyResults"
-                    class="col-md-6"></found-items>
+                    class="col-md-8"></found-items>
       
       </div>
     </div>

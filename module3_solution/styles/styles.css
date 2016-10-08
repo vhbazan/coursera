@@ -13,9 +13,23 @@ input[type="text"] {
   float:right;
 }
 
+.item-short-name {
+  float: left;
+}
+.item-name {
+  text­align: justify;
+  width: 75%;
+}
+.item-description {
+  text­align: justify;
+  width: 75%;
+  font-size: 12px;
+}
+
 li.item {
   display: block;
-  height: 34px;
+  height: 60px;
+
   margin: 3px;
   background: #ebeaea;
 }
