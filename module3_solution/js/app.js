@@ -11,7 +11,7 @@
         function FoundItemsDirective () {
             return {
                 restrict: 'EA',
-                templateUrl: '../foundItems.html',
+                templateUrl: 'foundItems.html',
                 scope: {
                     found: '<', 
                     onRemove: '&', 
