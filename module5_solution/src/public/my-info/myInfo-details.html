@@ -1,0 +1,22 @@
+    <ul class="my-info-details">
+        <li>
+            <span>First Name: </span><span ng-bind="$ctrl.myInfo.firstName"></span>
+        </li>
+        <li>
+            <span>Last Name: </span><span ng-bind="$ctrl.myInfo.lastName"></span>
+        </li>
+        <li>
+            <span>E-mai: </span><span ng-bind="$ctrl.myInfo.email"></span>
+        </li>
+        <li>
+            <span>Phone Number: </span><span ng-bind="$ctrl.myInfo.phoneNumber"></span>
+        </li>
+        <li>
+            <span>Favourite Dish Number: </span>
+            <span ng-bind="$ctrl.myInfo.dishId"></span>
+            <br>
+            <menu-item display-price="false" menu-item="$ctrl.myInfo.favouriteDish"></menu-item>
+
+        </li>
+
+    </ul>
