@@ -54,8 +54,8 @@
             class="invalid-dish">{{signupCtrl.dishIdError}}</span>
         </div>
          <button type="submit" class="btn btn-primary" 
-         ng-disabled="signupForm.$invalid" ng-click="signupCtrl.submit();">Subscribe</button>
+         ng-disabled="signupForm.$invalid || signupCtrl.dishIdError" ng-click="signupCtrl.submit();">Subscribe</button>
          <br>
-         <span ng-if="signupCtrl.savedDisIdMessage">{{signupCtrl.savedDisIdMessage}}</span>
+         <span ng-if="signupCtrl.savedDishIdMessage">{{signupCtrl.savedDishIdMessage}}</span>
     </form>
 </div>

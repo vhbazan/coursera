@@ -28,20 +28,14 @@ function MenuService($http, ApiPath) {
   };
 
   service.getMenuItem = function(item_id) {
-    console.log("getMenuItem called: " , item_id)
     return $http({
-              method: 'GET',
-              url: (ApiPath + '/menu_items/' + item_id + '.json')
-              }).then(function(response) {
-                  return response.data;
-                }, function(err) {
-                   return err;
-            });
-
+      method: 'GET',
+      url: (ApiPath + '/menu_items/' + item_id + '.json')
+      }).then(function(response) {
+          return response.data;
+        }, function(err) {
+           return err;
+        });
   };
-
-}
-
-
-
+};
 })();

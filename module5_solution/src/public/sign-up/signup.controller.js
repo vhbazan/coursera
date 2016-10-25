@@ -4,29 +4,27 @@
     .controller('SignupController', SignupController);
 
 
-    SignupController.$inject = ['MenuService', 'MyInfoService'];
+    SignupController.$inject = ['$scope', 'MenuService', 'MyInfoService'];
 
-    function SignupController(MenuService, MyInfoService){
+    function SignupController($scope, MenuService, MyInfoService){
         var ctrl = this; 
         ctrl.dishIdError = false;
         ctrl.savedDisIdMessage = false; 
 
-        ctrl.submit = function () {
-            console.log("submit pressed: " , ctrl.user.dishId);
-            MenuService.getMenuItem(ctrl.user.dishId).then(function(response) {
-                console.log('response: ', response)
+        $scope.$watch('signupCtrl.user.dishId', function(newValue, oldValue) {
+            MenuService.getMenuItem(newValue).then(function(response) {
                 if (response.status===500) {
                     ctrl.dishIdError= "No such menu number exists";
-                    ctrl.savedDisIdMessage = false; 
-                }
-                else {
+                } else {
                     ctrl.user.favouriteDish = response;
-                    MyInfoService.setMyInfo(ctrl.user);
-                    ctrl.savedDisIdMessage = "Your information has been saved";
                     ctrl.dishIdError= false;   
                 }
             });
+        });
 
+        ctrl.submit = function () {
+            MyInfoService.setMyInfo(ctrl.user);
+            ctrl.savedDishIdMessage = "Your information has been saved";
         }
     };
 
