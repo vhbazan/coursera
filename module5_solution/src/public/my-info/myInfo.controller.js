@@ -8,6 +8,5 @@
     function MyInfoController (MyInfoService, myInfo) {
         var ctrl = this; 
         ctrl.myInfo = myInfo;
-        console.log("MyInfoController and myInfo is: ", myInfo);
     };
 })();
