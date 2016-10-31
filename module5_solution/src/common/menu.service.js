@@ -31,11 +31,16 @@ function MenuService($http, ApiPath) {
     return $http({
       method: 'GET',
       url: (ApiPath + '/menu_items/' + item_id + '.json')
-      }).then(function(response) {
-          return response.data;
-        }, function(err) {
-           return err;
-        });
+      })
+    .then(function(response) {
+            return response.data;
+          })
+    .catch(function(responseError) {
+        return responseError;
+        /* I will leave this here to see if I could make it possible to work using the throw new
+         Error */
+        // throw new Error("No such menu number exists");
+    });
   };
 };
 })();

@@ -11,7 +11,6 @@
         service.myInfo;
 
         service.setMyInfo = function (my_info) {
-            console.log("saved my_info, ", my_info);
             service.myInfo = my_info;
         }
 
