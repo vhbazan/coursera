@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>My Info Details</h1>
+        
+        <my-info-details ng-if="myInfoCtrl.myInfo" my-info="myInfoCtrl.myInfo"></my-info-details>
+        <div ng-hide="myInfoCtrl.myInfo">
+            <h4>Not Signed Up Yet. <a href="#" ui-sref="public.signup">Sign up Now!</a></h4>
+        </div>
+</div>
